@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trivia Game</title>
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+<style>
+		.bckgimg {
+			background-image: url(assets/images/baseball-field-2.jpg);
+			background-size: cover;
+		}
+
+</style>
+
+
+</head>
+<body class="bckgimg">
+
+	<div id="container" style="text-align: center">
+
+		<div class="panel panel-default">
+			<h1>Baseball Trivia</h1>
+
+
+				Time Remaining: <div id="running-time"></div> Seconds
+
+			<form id="quiz" name="quiz">
+					
+					<div class="questions" id="question-one">Who was the first Major Leaguer to have his number retired?</div>
+
+					<div id="questions">
+                      <label><input type="radio" id="question1" name="question1" value="incorrect"> Jackie Robinson</label>
+                      <label><input type="radio" id="question1" name="question1" value="correct"> Lou Gehrig</label>
+                      <label><input type="radio" id="question1" name="question1" value="incorrect"> Babe Ruth</label>
+                      <label><input type="radio" id="question1" name="question1" value="incorrect"> Ty Cobb</label>
+                     </div>
+
+					<div class="questions" id="question-two">Which of these players did Not win a Cy Young Award in their Career?</div>
+						<div id="questions">
+	                      <label><input type="radio" id="question1" name="question2" value="incorrect"> Catfish Hunter</label>
+	                      <label><input type="radio" id="question1" name="question2" value="incorrect"> John Smoltz</label>
+	                      <label><input type="radio" id="question1" name="question2" value="incorrect"> Don Drysdale</label>
+	                      <label><input type="radio" id="question1" name="question2" value="correct"> Nolan Ryan</label>
+	                     </div>					
+
+					<div class="questions" id="question-three">Whose baseball card sold for a record 3.12 million at an auction in 2016?</div>
+						<div id="questions">
+	                      <label><input type="radio" id="question1" name="question3" value="incorrect"> Ted Williams</label>
+	                      <label><input type="radio" id="question1" name="question3" value="incorrect"> Mickey Mantle</label>
+	                      <label><input type="radio" id="question1" name="question3" value="correct"> Honus Wagner</label>
+	                      <label><input type="radio" id="question1" name="question3" value="incorrect"> Roberto Clemente</label>
+	                     </div>				
+
+					<div class="questions" id="question-four">Who holds the major league record with 59 consecutive scoreless innings pitched?</div>
+						<div id="questions">
+	                      <label><input type="radio" id="question1" name="question4" value="correct"> Orel Hershiser</label>
+	                      <label><input type="radio" id="question1" name="question4" value="incorrect"> Pedro Martinez</label>
+	                      <label><input type="radio" id="question1" name="question4" value="incorrect"> Steve Carlton</label>
+	                      <label><input type="radio" id="question1" name="question4" value="incorrect"> Greg Maddux</label>
+	                     </div>		
+					<div class="questions" id="question-five">Which player has appeared in the most world series games?</div>
+						<div id="questions">
+	                      <label><input type="radio" id="question1" name="question5" value="incorrect"> Babe Ruth</label>
+	                      <label><input type="radio" id="question1" name="question5" value="incorrectg"> Mickey Mantle</label>
+	                      <label><input type="radio" id="question1" name="question5" value="correct"> Yogi Berra</label>
+	                      <label><input type="radio" id="question1" name="question5" value="incorrect"> Derek Jeter</label>
+	                     </div>		
+					<div class="questions" id="question-six">Which player has the most hits in the 1980's?</div>
+						<div id="questions">
+	                      <label><input type="radio" id="question1" name="question6" value="incorrect"> Rickey Henderson</label>
+	                      <label><input type="radio" id="question1" name="question6" value="correct"> Robin Yount</label>
+	                      <label><input type="radio" id="question1" name="question6" value="incorrect"> Wade Boggs</label>
+	                      <label><input type="radio" id="question1" name="question6" value="incorrect"> Tim Raines</label>
+	                     </div>		
+					<div class="questions" id="question-seven">In what year was the first world series held?</div>
+						<div id="questions">
+	                      <label><input type="radio" id="question1" name="question7" value="incorrect"> 1873</label>
+	                      <label><input type="radio" id="question1" name="question7" value="correct"> 1903</label>
+	                      <label><input type="radio" id="question1" name="question7" value="incorrect"> 1908</label>
+	                      <label><input type="radio" id="question1" name="question7" value="incorrect"> 1890</label>
+	                     </div>		
+					<div class="questions" id="question-eight">Which of these players was NOT a member of the first baseball hall of fame class?</div>
+						<div id="questions">
+	                      <label><input type="radio" id="question1" name="question8" value="incorrect"> Ty Cobb</label>
+	                      <label><input type="radio" id="question1" name="question8" value="incorrect"> Christy Mathewson</label>
+	                      <label><input type="radio" id="question1" name="question8" value="incorrect"> Babe Ruth</label>
+	                      <label><input type="radio" id="question1" name="question8" value="correct"> Cy Young</label>
+	                     </div>		
+
+				<input id="button" type="button" value="Sumbit" onclick ="check();">
+
+			</form>
+
+		</div>
+
+
+	</div>
+
+	<div id="after-submit">
+		<h1>Baseball Trivia</h1>
+		<p>All Done!</p>
+		<p id="answers-correct"></p>
+		<p id="answers-incorrect"></p>
+		<p id="unanswered"></p>
+	</div>
+
+
+
+</body>
+</html>
